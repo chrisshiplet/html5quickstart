@@ -1,15 +1,17 @@
-/* Eric Meyer's Reset CSS v2.0
+/* Master Reset
+   adapted from Eric Meyer's Reset CSS v2.0
 --------------------------------------------- */
 
 html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{border:0;font-size:100%;font:inherit;vertical-align:baseline;margin:0;padding:0}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:none}table{border-collapse:collapse;border-spacing:0}
+:focus { outline: 0; }
 
 
-/* Main Page Styles
+/* Main Styles
 --------------------------------------------- */
 
 html {
-	font-size: 10px;
-	-webkit-font-smoothing: subpixel-antialiased;
+	font-size: 16px;
+	-webkit-font-smoothing: antialiased;
 }
 
 strong {
@@ -32,20 +34,95 @@ hr {
 	display: none;
 }
 
+/* Utility Classes
+--------------------------------------------- */
+
+/* IE10 media query support */
+@-ms-viewport {
+	width: device-width;
+}
+
+/* clearfix for floats */
+.clearfix,
+.row,
+.col,
+.group {
+	*zoom: 1;
+}
+
+.clearfix:before,
+.clearfix:after,
+.row:before,
+.row:after,
+.col:before,
+.col:after,
+.group:before,
+.group:after {
+	display: table;
+	line-height: 0;
+	content: "";
+}
+
+.clearfix:after,
+.row:after,
+.col:after,
+.group:after {
+	clear: both;
+}
+
+/* 12 Column Responsive Grid System 
+   adapted from http://responsive.gs
+--------------------------------------------- */
+
+/* Set all elements box-sizing to border-box
+   for adding additional padding to elements.
+   If you need support for IE7 and lower use polyfill: 
+   https://github.com/Schepp/box-sizing-polyfill */
+* { 
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.container { margin: 0 auto; }
+
+.col { 
+	display: block;
+	float: left;
+	width: 100%;
+}
+
+/* Reset margins */
+.col:first-child { margin-left: 0; } /* all browsers except IE6 and lower */
+
 
 /* Page Structure
 --------------------------------------------- */
 
+/* Insert various element styles here */
 
 
 /* Responsiveness
 --------------------------------------------- */
 
-/*
-@media only screen and (min-width: 480px) {
-
+@media screen and (min-width: 768px) {
+	/* Responsive grid */
+	.col { margin-left: 2%; }
+	.span_1 { width: 6.5%; }
+	.span_2 { width: 15.0%; }
+	.span_3 { width: 23.5%; }
+	.span_4 { width: 32.0%; }
+	.span_5 { width: 40.5%; }
+	.span_6 { width: 49.0%; }
+	.span_7 { width: 57.5%; }
+	.span_8 { width: 66.0%; }
+	.span_9 { width: 74.5%; }
+	.span_10 { width: 83.0%; }
+	.span_11 { width: 91.5%; }
+	.span_12 { width: 100%; }
+	
+	/* Other styles */
 }
-*/
 
 
 /* Retina Graphics
