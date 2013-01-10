@@ -2,6 +2,8 @@ html5quickstart
 ===============
 A minimal template to start an HTML5 project without the overhead of Bootstrap (and similar frameworks).
 
+The Responsive Grid was tested in Chrome, Safari, Firefox, IE7+, iOS, and Android's stock browser. 
+
 ##Overview
 Includes the following features:
 
