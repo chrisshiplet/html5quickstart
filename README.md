@@ -32,25 +32,29 @@ To use the responsive grid, set the wrapper to have classes *.container* and *.r
 Here is an example of implementing the responsive grid:
 
 ```html
-<div class="row">
-	<div class="col span_6">This column has span_6</div>
-	<div class="col span_6">This column has span_6</div>
-</div>
+<div class="container row">
 
-<div class="row">
-	<div class="col span_12">This column has span_12</div>
-</div>
+    <div class="row">
+	    <div class="col span_6">This column has span_6</div>
+	    <div class="col span_6">This column has span_6</div>
+    </div>
+    
+    <div class="row">
+	    <div class="col span_12">This column has span_12</div>
+    </div>
+    
+    <div class="row">
+	    <div class="col span_6 offset_6">span_6 offset_6</div>
+    </div>
+    
+    <div class="row">
+	    <div class="col span_4 offset_2">span_4 offset_2</div>
+    </div>
+    
+    <div class="row">
+	    <div class="col span_2">span_2</div>
+    </div>
 
-<div class="row">
-	<div class="col span_6 offset_6">span_6 offset_6</div>
-</div>
-
-<div class="row">
-	<div class="col span_4 offset_2">span_4 offset_2</div>
-</div>
-
-<div class="row">
-	<div class="col span_2">span_2</div>
 </div>
 ```
 
