@@ -41,6 +41,14 @@ video {
 	max-width: 100%;
 }
 
+::-moz-selection {
+	/* change for custom selection colors */
+}
+
+::selection {
+    /* change for custom selection colors */
+}
+
 /* Utility Classes
 --------------------------------------------- */
 
