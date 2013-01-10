@@ -95,6 +95,11 @@ textarea {
 	visibility: hidden;
 }
 
+/* Hide from screenreaders and browsers and maintain layout */
+.invisible {
+	visibility: hidden;
+}
+
 /* Hide from browsers but NOT screenreaders */
 .visuallyhidden {
 	border: 0;
@@ -147,6 +152,7 @@ textarea {
 @media screen and (min-width: 768px) {
 	/* Responsive grid */
 	.col { margin-left: 2%; }
+	
 	.span_1 { width: 6.5%; }
 	.span_2 { width: 15.0%; }
 	.span_3 { width: 23.5%; }
@@ -159,6 +165,20 @@ textarea {
 	.span_10 { width: 83.0%; }
 	.span_11 { width: 91.5%; }
 	.span_12 { width: 100%; }
+	
+	.offset_1 { margin-left: 10.5%; }
+	.offset_2 { margin-left: 19%; }
+	.offset_3 { margin-left: 27.5%; }
+	.offset_4 { margin-left: 36%; }
+	.offset_5 { margin-left: 44.5%; }
+	.offset_6 { margin-left: 53; }
+	.offset_7 { margin-left: 61.5%; }
+	.offset_8 { margin-left: 70%; }
+	.offset_9 { margin-left: 78.5%; }
+	.offset_10 { margin-left: 86%; }
+	.offset_11 { margin-left: 95.5%; }
+	.offset_12 { margin-left: 104%; }
+	
 	
 	/* Other styles */
 }
