@@ -1,3 +1,13 @@
+/*
+ * html5quickstart
+ * by @nearengine
+ *
+ * http://nearengine.com
+ *
+ * github: https://github.com/nearengine/html5quickstart
+ */
+
+
 /* Master Reset
    adapted from Eric Meyer's Reset CSS v2.0
 --------------------------------------------- */
@@ -179,8 +189,8 @@ textarea {
 	.col.offset_11 { margin-left: 93.5%; }
 	.col.offset_12 { margin-left: 102%; }
 	
-	
 	/* Other styles */
+	
 }
 
 
