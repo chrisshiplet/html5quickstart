@@ -21,6 +21,7 @@ html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abb
 
 html {
 	font-size: 16px;
+	/* fix webkit's rendering of web fonts */
 	-webkit-font-smoothing: antialiased;
 }
 
@@ -38,6 +39,11 @@ a:hover {
 
 a img {
 	border: none;
+}
+
+img {
+	/* fix downsampled images in older IEs */
+	-ms-interpolation-mode: bicubic; 
 }
 
 hr {
@@ -66,7 +72,7 @@ textarea {
 /* Utility Classes
 --------------------------------------------- */
 
-/* IE10 media query support */
+/* IE10 on Win8 tablet media query support */
 @-ms-viewport {
 	width: device-width;
 }
@@ -136,7 +142,9 @@ textarea {
 	box-sizing: border-box;
 }
 
-.container { margin: 0 auto; }
+.container { 
+	margin: 0 auto;
+}
 
 .col { 
 	display: block;
@@ -160,6 +168,7 @@ textarea {
 /* Example breakpoints: 320, 480, 600, 768, 1024, 1200 */
 
 @media screen and (min-width: 768px) {
+
 	/* Responsive grid */
 	.col { margin-left: 2%; clear: right; }
 	
