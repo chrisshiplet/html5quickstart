@@ -59,6 +59,8 @@ Here is an example of implementing the responsive grid:
 
 </div>
 ```
+###.wrapper
+Apply this to your page wrapping div to set the max-width of the layout and keep it centered.
 
 ###.clearfix
 The classic float clearing fix. Apply clearfix to a floated element to make sure that elements below it clear the float properly.
