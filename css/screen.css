@@ -45,6 +45,8 @@ strong {
 }
 
 a {
+	/* some styles can default links to insertion cursor */
+	cursor: pointer;
 	color: inherit;
 }
 
