@@ -44,8 +44,9 @@ html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abb
 html {
 	font-size: 16px;
 	overflow-y: auto;
-	/* fix webkit's rendering of web fonts */
+	/* uncomment to fix webkit font rendering on dark sites
 	-webkit-font-smoothing: antialiased;
+	*/
 }
 
 strong {
