@@ -1,4 +1,4 @@
-html5quickstart
+html5quickstart v0.9.0
 ===============
 A minimal template to start an HTML5 project without the overhead of Bootstrap (and similar frameworks).
 
