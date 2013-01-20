@@ -26,7 +26,7 @@ Includes the following features:
 - robots.txt placeholder 
 
 ##Documentation
-Here's how to use the various the responsive grid and the utility classes:
+Here's how to use the responsive grid and the various utility classes:
 
 ###Responsive Grid
 To use the responsive grid, set the wrapper to have classes *.container* and *.row*. Each row has class *.row*, and each column inside a row has class *.col*. The responsive grid has 12 columns, so specify the width of a column by adding class *.span_n* where n is the number of columns to span. Finally, you can use *.offset_n* where n is the number of columns to offset for a left margin.
