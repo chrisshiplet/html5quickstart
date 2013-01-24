@@ -1,4 +1,4 @@
-html5quickstart v0.9.0
+html5quickstart v0.9.1
 ===============
 A minimal template to start an HTML5 project without the overhead of Bootstrap (and similar frameworks).
 
@@ -80,3 +80,9 @@ That's all for now! Thanks to [Dan Cederholm](http://simplebits.com) and [Ethan 
 Parts were adapted from [Eric Meyer's CSS Reset](http://meyerweb.com/eric/tools/css/reset/), [Responsive.gs](http://responsive.gs/), and the [HTML5 Boilerplate](http://html5boilerplate.com/).
 
 Feel free to modify and use in your projects as you wish, although a link to [my site](http://nearengine.com) or the [GitHub repo](http://github.com/nearengine/html5quickstart) is always appreciated.
+
+##Minor Changelog
+
+###0.9.1
+
+Converted breakpoint to em rather than px, to provide better support for browser zooming.
