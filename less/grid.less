@@ -1,0 +1,39 @@
+//
+// CLEARFIX
+//
+
+.group() {
+	*zoom: 1;
+	
+	&:before,
+	&:after {
+		display: table;
+		line-height: 0;
+		content: "";
+	}
+	
+	&:after {
+		clear: both;
+	}
+}
+
+
+//
+// GRID
+//
+
+// Default 12 column fluid grid with 2% gutters
+@columns: 12;
+@gutter-width: 2%;
+
+// Grid classes
+.column(@x:1) {
+	display: inline;
+	float: left;
+	width: (@x*(100%/@columns)-@gutter-width);
+	margin: 0 (@gutter-width/2%);
+}
+
+.push(@x:1) {
+	margin-left: (@x*(100%/@columns)+@gutter-width/2);
+}

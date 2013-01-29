@@ -1,81 +1,133 @@
 @charset "UTF-8";
 
-/*
- * html5quickstart v0.9.0
- * by @nearengine
- *
- * http://nearengine.com
- *
- * github: https://github.com/nearengine/html5quickstart
- */
+//
+// html5quickstart v0.9.0
+//  by @nearengine
+//
+// web:    http://nearengine.com
+// github: https://github.com/nearengine/html5quickstart
+//
 
 
-/* Master Reset
---------------------------------------------- */
+//
+// OPTIONAL MIX-INS
+//
 
-/* Responsive Resets */
-
-	/* IE10 on Win8 tablet media query support */
-	@-ms-viewport {
-		width: device-width;
-	}
-
-	/* Opera and Opera Mobile */
-	@-o-viewport {
-		width: device-width;
-	}
-	
-	/* Standard */
-	@viewport {
-		width: device-width;
-	}
-	
-/* Adapted from Eric Meyer's Reset CSS v2.0 */
-
-html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{border:0;font-size:100%;font:inherit;vertical-align:baseline;margin:0;padding:0}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:none}table{border-collapse:collapse;border-spacing:0}
-
-/* Hide "glow" effect on focus */
-:focus { outline: 0; }
+@import "grid.less"; // Provides a clearfix .group() and fluid grid .row() and .column()
+@import "utility.less"; // Provides accessible hiding and invisibility classes
 
 
-/* Main Styles
+//
+// CSS RESET
+//
+
+@import "reset.less"; // Provides a basic CSS reset optimized for responsive sites
+
+
+/* ---------------------------------------------
+	MAIN STYLES
 --------------------------------------------- */
 
 html {
+	// Fix issues with ems in IE
 	font-size: 100%;
-	overflow-y: auto;
-	-webkit-text-size-adjust: 100%;
+	
+	// Stop browser from zooming on device orientation change
+	-webkit-text-size-adjust: 100%; 
 	-ms-text-size-adjust: 100%;
-	/* uncomment to fix webkit font rendering on dark sites
-	-webkit-font-smoothing: antialiased;
-	*/
+	
+	// uncomment to fix webkit font rendering on dark sites
+	// -webkit-font-smoothing: antialiased;
 }
 
-strong {
-	font-weight: bold;
+body {
+	.group();
 }
 
 a {
-	/* some styles can default links to insertion cursor */
 	cursor: pointer;
-	color: inherit;
-}
-
-a:hover {
 	text-decoration: none;
-}
-
-a img {
-	border: none;
+	color: #06c;
+	
+	&:hover {
+		text-decoration: underline;
+	}
+	
+	&:visited {
+		text-decoration: inherit;
+		color: #06c;
+	}
+	
+	&:focus {
+		outline: thin dotted;
+	}
+	
+	&:hover, &:active {
+		outline: none;
+	}
 }
 
 img {
-	/* fix downsampled images in older IEs */
+	// Stop IE6-9, FF3 from placing border around img in links
+	border: 0;
+	
+	// fix downsampled images in older IEs
 	-ms-interpolation-mode: bicubic; 
 }
 
 hr {
+	border: 0;
 	display: none;
+}
+
+::selection {
+	text-shadow: none;
+	// customize selection colors
+	background: #06c;
+	color: #fff;
+}
+
+::-moz-selection {
+	text-shadow: none;
+	// customize selection colors
+	background: #06c;
+	color: #fff;
+}
+
+ul, 
+ol { 
+	list-style-position: inside; 
+}
+
+b,
+strong {
+	font-weight: bold;
+}
+
+pre {
+    white-space: pre;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+
+small {
+	font-size: 80%; 
+}
+
+sub,
+sup {
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
+}
+
+sup {
+    top: -0.5em;
+}
+
+sub {
+    bottom: -0.25em;
 }
 
 img,
@@ -89,157 +141,32 @@ textarea {
 	resize: vertical;
 }
 
-::-moz-selection {
-	/* change for custom selection colors */
-}
 
-::selection {
-	/* change for custom selection colors */
-}
-
-/* Utility Classes
+/* ---------------------------------------------
+	PAGE DESIGN
 --------------------------------------------- */
 
-/* clearfix for floats */
-.clearfix,
-.row,
-.col,
-.group {
-	*zoom: 1;
-}
-
-.clearfix:before,
-.clearfix:after,
-.row:before,
-.row:after,
-.col:before,
-.col:after,
-.group:before,
-.group:after {
-	display: table;
-	line-height: 0;
-	content: "";
-}
-
-.clearfix:after,
-.row:after,
-.col:after,
-.group:after {
-	clear: both;
-}
-
-/* Hide from screenreaders and browsers */
-.hidden {
-	display: none !important;
-	visibility: hidden;
-}
-
-/* Hide from screenreaders and browsers and maintain layout */
-.invisible {
-	visibility: hidden;
-}
-
-/* Hide from browsers but NOT screenreaders */
-.visuallyhidden {
-	border: 0;
-	clip: rect(0 0 0 0);
-	height: 1px;
-	margin: -1px;
-	overflow: hidden;
-	padding: 0;
-	position: absolute;
-	width: 1px;
-}
-
-/* 12 Column Responsive Grid System 
-   adapted from http://responsive.gs
---------------------------------------------- */
-
-/* Set all elements box-sizing to border-box
-   for adding additional padding to elements.
-   If you need support for IE7 and lower use polyfill: 
-   https://github.com/Schepp/box-sizing-polyfill */
-* { 
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	box-sizing: border-box;
-}
-
-/* This is the maximum width for the entire site */
 .wrapper {
-	max-width: 1200px;
+	max-width: 75em; // This is the maximum width for the entire site
 	margin: 0 auto;
 	position: relative;
 }
 
-.container { 
-	margin: 0 auto;
-}
 
-.col { 
-	display: block;
-	float: left;
-	width: 100%;
-}
-
-/* Reset margins */
-.col:first-child { margin-left: 0; } /* all browsers except IE6 and lower */
-
-
-/* Page Structure
+/* ---------------------------------------------
+	RESPONSIVENESS
 --------------------------------------------- */
 
-/* Insert various element styles here */
+// Example breakpoints: 320px/20em, 480px/30em, 600px/37.5em, 768px/48em, 1024px/64em, 1200px/75em
+
+// @media screen and (min-width: 48em) {}
 
 
-/* Responsiveness
+/* ---------------------------------------------
+	RETINA GRAPHICS
 --------------------------------------------- */
 
-/* Example breakpoints: 320px/20em, 480px/30em, 600px/37.5em, 768px/48em, 1024px/64em, 1200px/75em */
-
-@media screen and (min-width: 48em) {
-
-	/* Responsive grid */
-	.col { margin-left: 2%; clear: right; }
-	
-	.span_1 { width: 6.5%; }
-	.span_2 { width: 15.0%; }
-	.span_3 { width: 23.5%; }
-	.span_4 { width: 32.0%; }
-	.span_5 { width: 40.5%; }
-	.span_6 { width: 49.0%; }
-	.span_7 { width: 57.5%; }
-	.span_8 { width: 66.0%; }
-	.span_9 { width: 74.5%; }
-	.span_10 { width: 83.0%; }
-	.span_11 { width: 91.5%; }
-	.span_12 { width: 100%; }
-	
-	.col.offset_1 { margin-left: 8.5%; }
-	.col.offset_2 { margin-left: 17%; }
-	.col.offset_3 { margin-left: 25.5%; }
-	.col.offset_4 { margin-left: 34%; }
-	.col.offset_5 { margin-left: 42.5%; }
-	.col.offset_6 { margin-left: 51%; }
-	.col.offset_7 { margin-left: 59.5%; }
-	.col.offset_8 { margin-left: 68%; }
-	.col.offset_9 { margin-left: 76.5%; }
-	.col.offset_10 { margin-left: 84%; }
-	.col.offset_11 { margin-left: 93.5%; }
-	.col.offset_12 { margin-left: 1 02%; }
-	
-	/* Other styles */
-	
-}
+// @media only screen and (-webkit-min-device-pixel-ratio: 2) {}
 
 
-/* Retina Graphics
---------------------------------------------- */
-
-/*
-@media only screen and (-webkit-min-device-pixel-ratio: 2) {
-
-}
-*/
-
-@import 'print.less';
+@import 'print.less'; // Provides some overrides for a better print layout
