@@ -14,7 +14,7 @@
 //
 
 @import "grid.less"; // Provides a clearfix .group() and fluid grid .row() and .column()
-@import "utility.less"; // Provides accessible hiding and invisibility classes
+@import "utility.less"; // Provides accessible hiding/invisibility classes as well as vendor prefixes
 
 
 //
@@ -147,6 +147,7 @@ textarea {
 --------------------------------------------- */
 
 .wrapper {
+	.group();
 	max-width: 75em; // This is the maximum width for the entire site
 	margin: 0 auto;
 	position: relative;

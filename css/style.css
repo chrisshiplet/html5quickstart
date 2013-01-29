@@ -266,9 +266,21 @@ textarea {
 --------------------------------------------- */
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/chris\/Dropbox\/Sites\/html5quickstart\/less\/style\.less}line{font-family:\00003149}}
 .wrapper {
+  *zoom: 1;
   max-width: 75em;
   margin: 0 auto;
   position: relative;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/chris\/Dropbox\/Sites\/html5quickstart\/less\/grid\.less}line{font-family:\000038}}
+.wrapper:before,
+.wrapper:after {
+  display: table;
+  line-height: 0;
+  content: "";
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/chris\/Dropbox\/Sites\/html5quickstart\/less\/grid\.less}line{font-family:\0000315}}
+.wrapper:after {
+  clear: both;
 }
 /* ---------------------------------------------
 	RESPONSIVENESS
