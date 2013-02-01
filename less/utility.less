@@ -32,8 +32,22 @@
 
 .opacity(@opacity:100) {
 	opacity: @opacity;
-	filter:alpha%("(opacity = %d)",@opacity); // IE6+
-	zoom:1; // Trigger hasLayout in IE6-7
+	filter: alpha%("(opacity = %d)",@opacity); // IE6+
+	zoom: 1; // Trigger hasLayout in IE6-7
+}
+
+.box-sizing(@sizing:border-box) {
+	-webkit-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+	        box-sizing: border-box;
+}
+
+.transition(@element:all,@time:1s,@style:ease) {	
+	-webkit-transition: @arguments;
+	   -moz-transition: @arguments;
+	    -ms-transition: @arguments;
+	     -o-transition: @arguments;
+	        transition: @arguments;
 }
 
 

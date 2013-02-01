@@ -23,17 +23,38 @@
 //
 
 // Default 12 column fluid grid with 2% gutters
-@columns: 12;
-@gutter-width: 2%;
+// These can be set to any value you'd like
+@grid-columns: 12;
+@grid-gutter-width: 2%;
 
-// Grid classes
+// Use border-box to set the padding of fluid columns to em/px values
+@grid-box-sizing: border-box;
+
+//
+// Use .column(widthInColumns); and .push(widthInColumns); to make columns.
+//
+// Add .group on their containing row elements.
+//
+// Use .single-row if you want a block element to line up with the grid,
+// but contain no columns.
+//
+
 .column(@x:1) {
 	display: inline;
 	float: left;
-	width: (@x*(100%/@columns)-@gutter-width);
-	margin: 0 (@gutter-width/2%);
+	width: (@x*(100%/@grid-columns)-@grid-gutter-width);
+	margin: 0 (@grid-gutter-width/2%);
+	-webkit-box-sizing: @grid-box-sizing;
+	-moz-box-sizing: @grid-box-sizing;
+	box-sizing: @grid-box-sizing;
+}
+
+.single-row() {
+	.group();
+	width: auto;
+	margin: 0 (@grid-gutter-width/2%);
 }
 
 .push(@x:1) {
-	margin-left: (@x*(100%/@columns)+@gutter-width/2);
+	margin-left: (@x*(100%/@grid-columns)+@grid-gutter-width/2);
 }

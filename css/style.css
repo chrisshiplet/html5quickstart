@@ -1,8 +1,7 @@
 @charset "UTF-8";
 /* ---------------------------------------------
-	MASTER RESET
+	0. MASTER RESET
 --------------------------------------------- */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/chris\/Dropbox\/Sites\/html5quickstart\/less\/reset\.less}line{font-family:\000037}}
 html,
 body,
 div,
@@ -91,7 +90,6 @@ video {
   margin: 0;
   padding: 0;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/chris\/Dropbox\/Sites\/html5quickstart\/less\/reset\.less}line{font-family:\000037}}
 article,
 aside,
 details,
@@ -105,28 +103,23 @@ nav,
 section {
   display: block;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/chris\/Dropbox\/Sites\/html5quickstart\/less\/reset\.less}line{font-family:\000037}}
 body {
   line-height: 1;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/chris\/Dropbox\/Sites\/html5quickstart\/less\/reset\.less}line{font-family:\000037}}
 ol,
 ul {
   list-style: none;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/chris\/Dropbox\/Sites\/html5quickstart\/less\/reset\.less}line{font-family:\000037}}
 blockquote,
 q {
   quotes: none;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/chris\/Dropbox\/Sites\/html5quickstart\/less\/reset\.less}line{font-family:\000037}}
 blockquote:before,
 blockquote:after,
 q:before,
 q:after {
   content: none;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/chris\/Dropbox\/Sites\/html5quickstart\/less\/reset\.less}line{font-family:\000037}}
 table {
   border-collapse: collapse;
   border-spacing: 0;
@@ -140,101 +133,88 @@ table {
 @viewport {
   width: device-width;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/chris\/Dropbox\/Sites\/html5quickstart\/less\/reset\.less}line{font-family:\0000317}}
 :focus {
   outline: 0;
 }
 /* ---------------------------------------------
-	MAIN STYLES
+	1. MAIN STYLES
 --------------------------------------------- */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/chris\/Dropbox\/Sites\/html5quickstart\/less\/style\.less}line{font-family:\0000331}}
 html {
   font-size: 100%;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/chris\/Dropbox\/Sites\/html5quickstart\/less\/style\.less}line{font-family:\0000343}}
 body {
   *zoom: 1;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/chris\/Dropbox\/Sites\/html5quickstart\/less\/grid\.less}line{font-family:\000038}}
 body:before,
 body:after {
   display: table;
   line-height: 0;
   content: "";
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/chris\/Dropbox\/Sites\/html5quickstart\/less\/grid\.less}line{font-family:\0000315}}
 body:after {
   clear: both;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/chris\/Dropbox\/Sites\/html5quickstart\/less\/style\.less}line{font-family:\0000347}}
 a {
   cursor: pointer;
   text-decoration: none;
-  color: #06c;
+  color: #0066cc;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/chris\/Dropbox\/Sites\/html5quickstart\/less\/style\.less}line{font-family:\0000352}}
 a:hover {
   text-decoration: underline;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/chris\/Dropbox\/Sites\/html5quickstart\/less\/style\.less}line{font-family:\0000356}}
 a:visited {
-  text-decoration: inherit;
-  color: #06c;
+  color: #0066cc;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/chris\/Dropbox\/Sites\/html5quickstart\/less\/style\.less}line{font-family:\0000361}}
 a:focus {
   outline: thin dotted;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/chris\/Dropbox\/Sites\/html5quickstart\/less\/style\.less}line{font-family:\0000365}}
 a:hover,
 a:active {
   outline: none;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/chris\/Dropbox\/Sites\/html5quickstart\/less\/style\.less}line{font-family:\0000370}}
 img {
   border: 0;
   -ms-interpolation-mode: bicubic;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/chris\/Dropbox\/Sites\/html5quickstart\/less\/style\.less}line{font-family:\0000378}}
 hr {
   border: 0;
   display: none;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/chris\/Dropbox\/Sites\/html5quickstart\/less\/style\.less}line{font-family:\0000383}}
 ::selection {
   text-shadow: none;
-  background: #06c;
+  background: #0066cc;
   color: #fff;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/chris\/Dropbox\/Sites\/html5quickstart\/less\/style\.less}line{font-family:\0000390}}
 ::-moz-selection {
   text-shadow: none;
-  background: #06c;
+  background: #0066cc;
   color: #fff;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/chris\/Dropbox\/Sites\/html5quickstart\/less\/style\.less}line{font-family:\0000397}}
 ul,
 ol {
   list-style-position: inside;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/chris\/Dropbox\/Sites\/html5quickstart\/less\/style\.less}line{font-family:\00003102}}
 b,
 strong {
   font-weight: bold;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/chris\/Dropbox\/Sites\/html5quickstart\/less\/style\.less}line{font-family:\00003107}}
 pre {
   white-space: pre;
   white-space: pre-wrap;
   word-wrap: break-word;
+  font-family: "Menlo", Consolas, "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", Monaco, "Courier New", Courier, monospace;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/chris\/Dropbox\/Sites\/html5quickstart\/less\/style\.less}line{font-family:\00003113}}
+code {
+  font-family: "Menlo", Consolas, "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", Monaco, "Courier New", Courier, monospace;
+}
 small {
   font-size: 80%;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/chris\/Dropbox\/Sites\/html5quickstart\/less\/style\.less}line{font-family:\00003117}}
 sub,
 sup {
   font-size: 75%;
@@ -242,57 +222,128 @@ sup {
   position: relative;
   vertical-align: baseline;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/chris\/Dropbox\/Sites\/html5quickstart\/less\/style\.less}line{font-family:\00003125}}
 sup {
   top: -0.5em;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/chris\/Dropbox\/Sites\/html5quickstart\/less\/style\.less}line{font-family:\00003129}}
 sub {
   bottom: -0.25em;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/chris\/Dropbox\/Sites\/html5quickstart\/less\/style\.less}line{font-family:\00003133}}
 img,
 embed,
 object,
 video {
   max-width: 100%;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/chris\/Dropbox\/Sites\/html5quickstart\/less\/style\.less}line{font-family:\00003140}}
 textarea {
   resize: vertical;
 }
 /* ---------------------------------------------
-	PAGE DESIGN
+	2. PAGE DESIGN
 --------------------------------------------- */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/chris\/Dropbox\/Sites\/html5quickstart\/less\/style\.less}line{font-family:\00003149}}
 .wrapper {
   *zoom: 1;
   max-width: 75em;
   margin: 0 auto;
   position: relative;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/chris\/Dropbox\/Sites\/html5quickstart\/less\/grid\.less}line{font-family:\000038}}
 .wrapper:before,
 .wrapper:after {
   display: table;
   line-height: 0;
   content: "";
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/chris\/Dropbox\/Sites\/html5quickstart\/less\/grid\.less}line{font-family:\0000315}}
 .wrapper:after {
   clear: both;
 }
+.wrapper {
+  background: #333;
+}
+.wrapper header {
+  padding: 1em;
+  color: #999;
+  text-align: center;
+}
+.wrapper section {
+  background: #999;
+  padding: 1em;
+}
+.wrapper footer {
+  padding: 1em;
+  background: #999;
+  text-align: center;
+}
+.wrapper section,
+.wrapper footer {
+  -webkit-transition: background 0.5s ease;
+  -moz-transition: background 0.5s ease;
+  -ms-transition: background 0.5s ease;
+  -o-transition: background 0.5s ease;
+  transition: background 0.5s ease;
+}
+.wrapper section:hover,
+.wrapper footer:hover {
+  background: #fff;
+}
+@media screen and (min-width: 48em) {
+  .wrapper section {
+    display: inline;
+    float: left;
+    width: 98%;
+    margin: 0 1%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  .wrapper .row {
+    *zoom: 1;
+  }
+  .wrapper .row:before,
+  .wrapper .row:after {
+    display: table;
+    line-height: 0;
+    content: "";
+  }
+  .wrapper .row:after {
+    clear: both;
+  }
+  .wrapper .row section {
+    display: inline;
+    float: left;
+    width: 23%;
+    margin: 0 1%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  .wrapper footer {
+    *zoom: 1;
+    width: auto;
+    margin: 0 1%;
+    margin-top: 1em;
+    margin-bottom: 1em;
+  }
+  .wrapper footer:before,
+  .wrapper footer:after {
+    display: table;
+    line-height: 0;
+    content: "";
+  }
+  .wrapper footer:after {
+    clear: both;
+  }
+}
 /* ---------------------------------------------
-	RESPONSIVENESS
+	3. RESPONSIVENESS
 --------------------------------------------- */
 /* ---------------------------------------------
-	RETINA GRAPHICS
+	4. RETINA GRAPHICS
 --------------------------------------------- */
-/* Print Stylesheet 
-   adapted from https://github.com/h5bp/html5-boilerplate
+/* ---------------------------------------------
+	00. PRINT OVERRIDES
+	   adapted from 
+	   https://github.com/h5bp/html5-boilerplate
 --------------------------------------------- */
 @media print {
-  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/chris\/Dropbox\/Sites\/html5quickstart\/less\/print\.less}line{font-family:\000037}}
   * {
     background: transparent !important;
     color: #000 !important;
@@ -301,58 +352,48 @@ textarea {
     box-shadow: none !important;
     text-shadow: none !important;
   }
-  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/chris\/Dropbox\/Sites\/html5quickstart\/less\/print\.less}line{font-family:\0000314}}
   a,
   a:visited {
     text-decoration: underline;
   }
-  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/chris\/Dropbox\/Sites\/html5quickstart\/less\/print\.less}line{font-family:\0000319}}
   a[href]:after {
     content: " (" attr(href) ")";
   }
-  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/chris\/Dropbox\/Sites\/html5quickstart\/less\/print\.less}line{font-family:\0000323}}
   abbr[title]:after {
     content: " (" attr(title) ")";
   }
   /* Don't show links for images, or javascript/internal links */
-  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/chris\/Dropbox\/Sites\/html5quickstart\/less\/print\.less}line{font-family:\0000329}}
   .ir a:after,
   a[href^="javascript:"]:after,
   a[href^="#"]:after {
     content: "";
   }
-  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/chris\/Dropbox\/Sites\/html5quickstart\/less\/print\.less}line{font-family:\0000335}}
   pre,
   blockquote {
     border: 1px solid #999;
     page-break-inside: avoid;
   }
-  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/chris\/Dropbox\/Sites\/html5quickstart\/less\/print\.less}line{font-family:\0000341}}
   thead {
     display: table-header-group;
     /* h5bp.com/t */
   
   }
-  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/chris\/Dropbox\/Sites\/html5quickstart\/less\/print\.less}line{font-family:\0000345}}
   tr,
   img {
     page-break-inside: avoid;
   }
-  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/chris\/Dropbox\/Sites\/html5quickstart\/less\/print\.less}line{font-family:\0000350}}
   img {
     max-width: 100% !important;
   }
   @page  {
     margin: 0.5cm;
   }
-  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/chris\/Dropbox\/Sites\/html5quickstart\/less\/print\.less}line{font-family:\0000358}}
   p,
   h2,
   h3 {
     orphans: 3;
     widows: 3;
   }
-  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/chris\/Dropbox\/Sites\/html5quickstart\/less\/print\.less}line{font-family:\0000365}}
   h2,
   h3 {
     page-break-after: avoid;

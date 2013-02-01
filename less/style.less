@@ -16,16 +16,44 @@
 @import "grid.less"; // Provides a clearfix .group() and fluid grid .row() and .column()
 @import "utility.less"; // Provides accessible hiding/invisibility classes as well as vendor prefixes
 
+//
+// VARIABLES
+//
+@color-link: #06c;
+@font-stack-monotype: "Menlo", Consolas, "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", Monaco, "Courier New", Courier, monospace;
 
 //
-// CSS RESET
+//  TABLE OF CONTENTS
+//
+//   0: Master Reset
+//      Your reset of choice in reset.less
+//		
+//   1: Main Styles
+//      Sitewide styles for HTML elements and the like go here
+//		
+//   2: Page Design
+//      Styles for layout elements and individual pages can
+//      go here, in addition to .oldie-specific classes.
+//
+//   3: Responsiveness (Media queries)
+//      Place all your media queries here, or import them
+//		
+//   4: Retina Graphics Overrides
+//		
+//  00: Print Overrides
+//      A print stylesheet based on h5bp found in print.less
+//
+
+
+//
+// 0. CSS RESET
 //
 
 @import "reset.less"; // Provides a basic CSS reset optimized for responsive sites
 
 
 /* ---------------------------------------------
-	MAIN STYLES
+	1. MAIN STYLES
 --------------------------------------------- */
 
 html {
@@ -38,6 +66,8 @@ html {
 	
 	// uncomment to fix webkit font rendering on dark sites
 	// -webkit-font-smoothing: antialiased;
+	
+	.box-sizing(border-box);
 }
 
 body {
@@ -47,22 +77,23 @@ body {
 a {
 	cursor: pointer;
 	text-decoration: none;
-	color: #06c;
+	color: @color-link;
 	
 	&:hover {
 		text-decoration: underline;
 	}
 	
 	&:visited {
-		text-decoration: inherit;
-		color: #06c;
+		color: @color-link;
 	}
 	
 	&:focus {
+		// Outline while focused for keyboard users
 		outline: thin dotted;
 	}
 	
 	&:hover, &:active {
+		// No outline if hovered or active while focused
 		outline: none;
 	}
 }
@@ -77,20 +108,21 @@ img {
 
 hr {
 	border: 0;
+	// Add height and border below if necessary
 	display: none;
 }
 
 ::selection {
 	text-shadow: none;
 	// customize selection colors
-	background: #06c;
+	background: @color-link;
 	color: #fff;
 }
 
 ::-moz-selection {
 	text-shadow: none;
 	// customize selection colors
-	background: #06c;
+	background: @color-link;
 	color: #fff;
 }
 
@@ -108,6 +140,11 @@ pre {
     white-space: pre;
     white-space: pre-wrap;
     word-wrap: break-word;
+    font-family: @font-stack-monotype;
+}
+
+code {
+	font-family: @font-stack-monotype;
 }
 
 small {
@@ -138,12 +175,13 @@ video {
 }
 
 textarea {
+	// Stops users from breaking layout by horizontally expanding textareas in webkit
 	resize: vertical;
 }
 
 
 /* ---------------------------------------------
-	PAGE DESIGN
+	2. PAGE DESIGN
 --------------------------------------------- */
 
 .wrapper {
@@ -153,9 +191,66 @@ textarea {
 	position: relative;
 }
 
+//
+// <RIP ALL THIS OUT>
+//
+	.wrapper {
+		background: #333;
+		
+		header {
+			padding: 1em;
+			color: #999;
+			text-align: center;
+		}
+		
+		section {
+			background: #999;
+			padding: 1em;
+		}
+		
+		footer {
+			padding: 1em;
+			background: #999;
+			text-align: center;
+		}
+		
+		section, footer {
+			.transition(background,.5s,ease);
+			&:hover {
+				background: #fff;
+			}
+		}
+	}
+	
+	@media screen and (min-width: 48em) {
+	
+		.wrapper {
+			section { 
+				.column(12); 
+			}
+			
+			.row { 
+				.group(); 
+			}
+			
+			.row section { 
+				.column(3); 
+			}
+			
+			footer {
+				.single-row();
+				margin-top: 1em;
+				margin-bottom: 1em;
+			}
+		}
+		
+	}
+//
+// </RIP ALL THIS OUT>
+//
 
 /* ---------------------------------------------
-	RESPONSIVENESS
+	3. RESPONSIVENESS
 --------------------------------------------- */
 
 // Example breakpoints: 320px/20em, 480px/30em, 600px/37.5em, 768px/48em, 1024px/64em, 1200px/75em
@@ -164,10 +259,15 @@ textarea {
 
 
 /* ---------------------------------------------
-	RETINA GRAPHICS
+	4. RETINA GRAPHICS
 --------------------------------------------- */
 
 // @media only screen and (-webkit-min-device-pixel-ratio: 2) {}
 
 
+//
+// 00. PRINT STYLES
+//
+
 @import 'print.less'; // Provides some overrides for a better print layout
+
