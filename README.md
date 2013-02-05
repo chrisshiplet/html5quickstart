@@ -1,8 +1,10 @@
-html5quickstart v0.9.1
+html5quickstart v0.9.2
 ===============
 A minimal template to start an HTML5 project without the overhead of Bootstrap (and similar frameworks).
 
-The Responsive Grid was tested in Chrome, Safari, Firefox, IE7+, iOS, and Android's stock browser. 
+The Responsive Grid was tested in Chrome, Safari, Firefox, IE7+, iOS, and Android's stock browser.
+
+**Future versions of html5quickstart are written with LESS. No additional support will be provided for this deprecated version, but it is still usable if you want standard CSS.**
 
 ##Overview
 Includes the following features:
@@ -82,6 +84,10 @@ Parts were adapted from [Eric Meyer's CSS Reset](http://meyerweb.com/eric/tools/
 Feel free to modify and use in your projects as you wish, although a link to [my site](http://nearengine.com) or the [GitHub repo](http://github.com/nearengine/html5quickstart) is always appreciated.
 
 ##Minor Changelog
+
+###0.9.2
+
+This version converts the breakpoints to ems and is tagged for the final 0.9.x download. Future versions will break compatibility and no additional support for 0.9.x will be provided.
 
 ###0.9.1
 
