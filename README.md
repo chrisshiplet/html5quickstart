@@ -53,7 +53,7 @@ Here is an example of implementing a responsive, fluid grid:
 </div>
 ```
 
-```css
+```SCSS
 .wrapper {
     section { padding: 1em; }
 }
