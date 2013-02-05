@@ -1,6 +1,4 @@
-//
 // VENDOR PREFIX HELPERS
-//
 
 .border-radius (@radius:0) {
     -webkit-border-radius: @radius;
@@ -37,9 +35,9 @@
 }
 
 .box-sizing(@sizing:border-box) {
-	-webkit-box-sizing: border-box;
-	   -moz-box-sizing: border-box;
-	        box-sizing: border-box;
+	-webkit-box-sizing: @sizing;
+	   -moz-box-sizing: @sizing;
+	        box-sizing: @sizing;
 }
 
 .transition(@element:all,@time:1s,@style:ease) {	
@@ -51,9 +49,7 @@
 }
 
 
-//
 // UTILITY CLASSES
-//
 
 // Hide from screenreaders and browsers
 .hidden() {
