@@ -2,6 +2,8 @@ html5quickstart
 ===============
 A minimal LESS template to start an HTML5 project without the overhead of Bootstrap (and similar frameworks). Several optional mixins can be left out entirely.
 
+If you need a pure CSS solution that doesn't involve LESS, please see the [0.9.x versions](https://github.com/nearengine/html5quickstart/tags) of html5quickstart. *No further support is offered for these versions.*
+
 The fluid grid was tested in Chrome, Safari, Firefox, IE9+, iOS, and Android's stock browser. It is intended to be used with a progressively-enhanced mobile-first methodology. 
 
 **Internet Explorer note:** Mobile-first design ensures that older versions of Internet Explorer will show the mobile styles, since they don't support media queries. If you need to style older versions of Internet Explorer more extensively, you can create selectors that start with .oldie, which targets IE8 and below.
