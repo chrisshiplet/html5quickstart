@@ -12,10 +12,10 @@
             border-radius: @arguments;
 }
 
-.box-shadow (@x:0, @y:0.1em, @feather:0.1em, @color:#000000) {
-   	   -webkit-box-shadow: @x @y @feather @color;
-	      -moz-box-shadow: @x @y @feather @color;
-	           box-shadow: @x @y @feather @color;
+.box-shadow (@x:0, @y:0.1em, @feather:0.1em, @dist:0, @color:#000000) {
+   	   -webkit-box-shadow: @x @y @feather @dist @color;
+	      -moz-box-shadow: @x @y @feather @dist @color;
+	           box-shadow: @x @y @feather @dist @color;
 }
 
 .gradient(@start-color:#ffffff, @end-color:#000000) {
@@ -40,7 +40,7 @@
 	        box-sizing: @sizing;
 }
 
-.transition(@element:all,@time:1s,@style:ease) {	
+.transition(@element:all,@time:1s,@style:ease) {
 	-webkit-transition: @arguments;
 	   -moz-transition: @arguments;
 	    -ms-transition: @arguments;

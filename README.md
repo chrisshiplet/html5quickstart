@@ -4,7 +4,7 @@ A minimal LESS template to start an HTML5 project without the overhead of Bootst
 
 If you need a pure CSS solution that doesn't involve LESS, please see the [0.9.x versions](https://github.com/nearengine/html5quickstart/tags) of html5quickstart. *No further support is offered for these versions.*
 
-The fluid grid was tested in Chrome, Safari, Firefox, IE9+, iOS, and Android's stock browser. It is intended to be used with a progressively-enhanced mobile-first methodology. 
+The fluid grid was tested in Chrome, Safari, Firefox, IE9+, iOS, and Android's stock browser. It is intended to be used with a progressively-enhanced mobile-first methodology.
 
 **Internet Explorer note:** Mobile-first design ensures that older versions of Internet Explorer will show the mobile styles, since they don't support media queries. If you need to style older versions of Internet Explorer more extensively, you can create selectors that start with .oldie, which targets IE8 and below.
 
@@ -12,25 +12,25 @@ The fluid grid was tested in Chrome, Safari, Firefox, IE9+, iOS, and Android's s
 Includes the following features:
 
 **CSS**
-- Master CSS Reset  
-- Semantic Fluid Grid Mixin with micro clearfix  
+- Master CSS Reset
+- Semantic Fluid Grid Mixin with micro clearfix
 - Utility Mixin with accessible hiding & vendor prefixes
-- Placeholders for media queries & retina graphics    
+- Placeholders for media queries & retina graphics
 - h5bp Print Media Overrides
 - Formats b, strong, pre, code, small, sub, sup
 - Various browser specific fixes
 
 **HTML**
-- HTML5 doctype  
+- HTML5 doctype
 - Paul Irish oldie detection
 - CDN-loaded IE shivs for HTML5
-- Optional CDN-loaded jQuery  
+- Optional CDN-loaded jQuery
 - Placeholders for popular meta tags
 - Placeholders for Windows 8 and iOS device icons
 - Optimized Google Analytics placeholder
 
 **MISC**
-- robots.txt placeholder 
+- robots.txt placeholder
 
 ##Documentation
 Here's how to use the fluid grid and the various utility classes:
@@ -89,8 +89,8 @@ This mixin hides an element from browsers, but not screen readers.
 ####.border-radius (@radius:0)
 Border radius mixin. You can also specify four radii to make each corner a different radius.
 
-####.box-shadow (@x:0, @y:0.1em, @feather:0.1em, @color:#000000)
-Box shadow mixin that defaults to a 0.1em black drop shadow.
+####.box-shadow (@x:0, @y:0.1em, @feather:0.1em, @dist:0, @color:#000000)
+Box shadow mixin that defaults to a 0.1em 90 degree black drop shadow with a distance of 0.
 
 ####.gradient(@start-color:#ffffff, @end-color:#000000)
 Gradient mixin that supports Webkit/Gecko browsers and IE6+.
