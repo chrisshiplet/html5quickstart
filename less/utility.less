@@ -13,39 +13,39 @@
 }
 
 .box-shadow (@x:0, @y:0.1em, @feather:0.1em, @dist:0, @color:#000000) {
-   	   -webkit-box-shadow: @x @y @feather @dist @color;
-	      -moz-box-shadow: @x @y @feather @dist @color;
-	           box-shadow: @x @y @feather @dist @color;
+       -webkit-box-shadow: @x @y @feather @dist @color;
+          -moz-box-shadow: @x @y @feather @dist @color;
+               box-shadow: @x @y @feather @dist @color;
 }
 
 .gradient(@start-color:#ffffff, @end-color:#000000) {
-	background: ((@start-color + @end-color) / 2); // Average both colors as fallback for browsers that don't support gradients
-	background: -webkit-gradient(linear, left top, left bottom, from(@start-color), to(@end-color)); // Webkit
-	background: -moz-linear-gradient(@start-color, @end-color); // Firefox
-	filter: e(%("progid:DXImageTransform.Microsoft.gradient(startColorstr=%d, endColorstr=%d)", @start-color, @end-color)); // IE6-7
-	-ms-filter: %("progid:DXImageTransform.Microsoft.gradient(startColorstr=%d, endColorstr=%d)", @start-color, @end-color); // IE8
-	background-image: linear-gradient(@start-color, @end-color);
-	zoom: 1; // Trigger hasLayout in IE6-7
+    background: ((@start-color + @end-color) / 2); // Average both colors as fallback for browsers that don't support gradients
+    background: -webkit-gradient(linear, left top, left bottom, from(@start-color), to(@end-color)); // Webkit
+    background: -moz-linear-gradient(@start-color, @end-color); // Firefox
+    filter: e(%("progid:DXImageTransform.Microsoft.gradient(startColorstr=%d, endColorstr=%d)", @start-color, @end-color)); // IE6-7
+    -ms-filter: %("progid:DXImageTransform.Microsoft.gradient(startColorstr=%d, endColorstr=%d)", @start-color, @end-color); // IE8
+    background-image: linear-gradient(@start-color, @end-color);
+    zoom: 1; // Trigger hasLayout in IE6-7
 }
 
 .opacity(@opacity:1) {
-	opacity: @opacity;
-	filter: alpha%("(opacity = %d)",@opacity); // IE6+
-	zoom: 1; // Trigger hasLayout in IE6-7
+    opacity: @opacity;
+    filter: alpha%("(opacity = %d)",@opacity); // IE6+
+    zoom: 1; // Trigger hasLayout in IE6-7
 }
 
 .box-sizing(@sizing:border-box) {
-	-webkit-box-sizing: @sizing;
-	   -moz-box-sizing: @sizing;
-	        box-sizing: @sizing;
+    -webkit-box-sizing: @sizing;
+       -moz-box-sizing: @sizing;
+            box-sizing: @sizing;
 }
 
 .transition(@element:all,@time:1s,@style:ease) {
-	-webkit-transition: @arguments;
-	   -moz-transition: @arguments;
-	    -ms-transition: @arguments;
-	     -o-transition: @arguments;
-	        transition: @arguments;
+    -webkit-transition: @arguments;
+       -moz-transition: @arguments;
+        -ms-transition: @arguments;
+         -o-transition: @arguments;
+            transition: @arguments;
 }
 
 
@@ -53,23 +53,23 @@
 
 // Hide from screenreaders and browsers
 .hidden() {
-	display: none !important;
-	visibility: hidden;
+    display: none !important;
+    visibility: hidden;
 }
 
 // Hide from screenreaders and browsers and maintain layout
 .invisible() {
-	visibility: hidden;
+    visibility: hidden;
 }
 
 // Hide from browsers but NOT screenreaders
 .visuallyhidden() {
-	border: 0;
-	clip: rect(0 0 0 0);
-	height: 1px;
-	margin: -1px;
-	overflow: hidden;
-	padding: 0;
-	position: absolute;
-	width: 1px;
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
 }

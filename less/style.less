@@ -1,7 +1,7 @@
 @charset "UTF-8";
 
 //
-// html5quickstart v0.9.0
+// html5quickstart v1.0.1
 // by @nearengine
 //
 // web:    http://nearengine.com
@@ -25,19 +25,19 @@
 //
 //   0: Master Reset
 //      Your reset of choice in reset.less
-//		
+//
 //   1: Main Styles
 //      Sitewide styles for HTML elements and the like go here
-//		
-//   2: Page Design
+//
+//   2: Page Styles
 //      Styles for layout elements and individual pages can
 //      go here, in addition to .oldie-specific classes.
 //
-//   3: Responsiveness (Media queries)
+//   3: Responsive Breakpoints (Media queries)
 //      Place all your media queries here, or import them
-//		
+//
 //   4: Retina Graphics Overrides
-//		
+//
 //  00: Print Overrides
 //      A print stylesheet based on h5bp found in print.less
 
@@ -45,86 +45,86 @@
 @import "reset.less"; // Provides a basic CSS reset optimized for responsive sites
 
 
-/* ---------------------------------------------
-	1. MAIN STYLES
---------------------------------------------- */
+//
+// 1. MAIN STYLES
+//
 
 html {
-	// Fix issues with ems in IE
-	font-size: 100%;
-	
-	// Stop browser from zooming on device orientation change
-	-webkit-text-size-adjust: 100%; 
-	-ms-text-size-adjust: 100%;
-	
-	// uncomment to fix webkit font rendering on dark sites
-	// -webkit-font-smoothing: antialiased;
+    // Fix issues with ems in IE
+    font-size: 100%;
+
+    // Stop browser from zooming on device orientation change
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+
+    // uncomment to fix webkit font rendering on dark sites
+    // -webkit-font-smoothing: antialiased;
 }
 
 body {
-	.group();
+    .group();
 }
 
 a {
-	cursor: pointer;
-	text-decoration: none;
-	color: @color-link;
-	
-	&:visited {
-		color: @color-link;
-	}
+    cursor: pointer;
+    text-decoration: none;
+    color: @color-link;
 
-	&:hover {
-		text-decoration: underline;
-	}
-	
-	&:focus {
-		// Outline while focused for keyboard users
-		outline: thin dotted;
-	}
-	
-	&:hover, &:active {
-		// No outline if hovered or active while focused
-		outline: none;
-	}
+    &:visited {
+        color: @color-link;
+    }
+
+    &:hover {
+        text-decoration: underline;
+    }
+
+    &:focus {
+        // Outline while focused for keyboard users
+        outline: thin dotted;
+    }
+
+    &:hover, &:active {
+        // No outline if hovered or active while focused
+        outline: none;
+    }
 }
 
 img {
-	// Stop IE6-9, FF3 from placing border around img in links
-	border: 0;
-	
-	// fix downsampled images in older IEs
-	-ms-interpolation-mode: bicubic; 
+    // Stop IE6-9, FF3 from placing border around img in links
+    border: 0;
+
+    // fix downsampled images in older IEs
+    -ms-interpolation-mode: bicubic;
 }
 
 hr {
-	border: 0;
-	// Add height and border below if necessary
-	display: none;
+    border: 0;
+    // Add height and border below if necessary
+    display: none;
 }
 
 ::selection {
-	text-shadow: none;
-	// customize selection colors
-	background: @color-link;
-	color: #fff;
+    text-shadow: none;
+    // customize selection colors
+    background: @color-link;
+    color: #fff;
 }
 
 ::-moz-selection {
-	text-shadow: none;
-	// customize selection colors
-	background: @color-link;
-	color: #fff;
+    text-shadow: none;
+    // customize selection colors
+    background: @color-link;
+    color: #fff;
 }
 
-ul, 
-ol { 
-	list-style-position: inside; 
+ul,
+ol {
+    list-style-position: inside;
 }
 
 b,
 strong {
-	font-weight: bold;
+    font-weight: bold;
 }
 
 pre {
@@ -135,11 +135,11 @@ pre {
 }
 
 code {
-	font-family: @font-stack-monotype;
+    font-family: @font-stack-monotype;
 }
 
 small {
-	font-size: 80%; 
+    font-size: 80%;
 }
 
 sub,
@@ -162,39 +162,39 @@ img,
 embed,
 object,
 video {
-	max-width: 100%;
+    max-width: 100%;
 }
 
 textarea {
-	// Stops users from breaking layout by horizontally expanding textareas in webkit
-	resize: vertical;
+    // Stops users from breaking layout by horizontally expanding textareas in webkit
+    resize: vertical;
 }
 
 
-/* ---------------------------------------------
-	2. PAGE DESIGN
---------------------------------------------- */
+//
+// 2. PAGE STYLES
+//
 
 .wrapper {
-	.group();
-	max-width: 75em; // This is the maximum width for the entire site
-	margin: 0 auto;
-	position: relative;
+    .group();
+    max-width: 75em; // This is the maximum width for the entire site
+    margin: 0 auto;
+    position: relative;
 }
 
 
-/* ---------------------------------------------
-	3. RESPONSIVENESS
---------------------------------------------- */
+//
+// 3. RESPONSIVE BREAKPOINTS
+//
 
 // Example breakpoints: 320px/20em, 480px/30em, 600px/37.5em, 768px/48em, 1024px/64em, 1200px/75em
 
 // @media screen and (min-width: 48em) {}
 
 
-/* ---------------------------------------------
-	4. RETINA GRAPHICS
---------------------------------------------- */
+//
+// 4. RETINA OVERRIDES
+//
 
 // @media only screen and (-webkit-min-device-pixel-ratio: 2) {}
 
